@@ -1,0 +1,29 @@
+.images {
+  margin-top: 15.9rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: calc(100% / 3);
+  height: 7.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image span {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image {
+  width: calc(100% / 0.65);
+  vertical-align: middle;
+}
+
+.container:hover .image {
+  transform: scale(1.1);
+}
