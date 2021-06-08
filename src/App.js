@@ -1,3 +1,4 @@
+import React from "react";
 import Fluz from "./components/fluz-image/Fluz";
 
 function App() {

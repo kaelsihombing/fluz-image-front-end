@@ -1,56 +1,158 @@
-.search {
-  position: fixed !important;
-  top: 0;
-  z-index: 9999;
-}
-
-.image {
-  width: 375px;
-  height: auto;
+.search::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* background-image: linear-gradient(
+    to right,
+    rgb(29, 110, 116),
+    rgb(70, 0, 167)
+  ); */
+  background-color: rgb(0, 0, 0);
+  /* backdrop-filter: blur(5px); */
   position: absolute;
-  z-index: 1;
   top: 0;
   left: 0;
+  opacity: 0.5;
+}
+
+.search {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  overflow-x: hidden;
+  width: 40%;
+  background: url(../../assets/headerImage.png) center center no-repeat;
+  height: 100%;
 }
 
 .cover {
-  background-color: rgba(0, 0, 0, 0.427);
-  backdrop-filter: blur(2px);
-  width: 375px;
-  height: 255px;
-  position: absolute;
+  background-color: rgba(0, 0, 0, 0.249);
+  /* backdrop-filter: blur(2px); */
+  width: 100%;
+  height: 100%;
+  position: relative;
   z-index: 2;
   top: 0;
   left: 0;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .logo {
-  width: 210px;
+  width: 400px;
   height: auto;
   margin-top: 20px;
 }
 
 .form {
-  margin-top: -100px;
+  /* margin-top: -100px; */
 }
 
 .input {
   border: none;
   border-radius: 50px;
   margin: 5px;
-  background-color: rgba(255, 255, 255, 0.612);
+  background-color: rgba(255, 255, 255, 0.824);
+  width: 15rem;
+  height: 1.5rem;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.input:focus {
+  outline: none;
 }
 
 .button {
   margin: 5px;
   border: none;
   border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0.338);
+  background-color: rgba(62, 62, 62, 0.338);
+  height: 1.5rem;
+  width: 4rem;
   color: white;
+  text-align: center;
 }
 
 .button:hover {
+  background-color: rgba(225, 225, 225, 0.338);
+}
+
+@media (min-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+}
+@media (min-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+}
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+}
+@media (min-width: 1281px) {
+  /* .search {
+    position: fixed !important;
+    top: 0;
+    z-index: 9999;
+  }
+
+  .image {
+    width: 30rem;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+
+  .cover {
+    background-color: rgba(0, 0, 0, 0.427);
+    backdrop-filter: blur(2px);
+    width: 375px;
+    height: 255px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 210px;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .form {
+    margin-top: -100px;
+  }
+
+  .input {
+    border: none;
+    border-radius: 50px;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.612);
+  }
+
+  .button {
+    margin: 5px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.338);
+    color: white;
+  }
+
+  .button:hover {
+  } */
 }
