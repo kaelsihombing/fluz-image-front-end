@@ -12,7 +12,6 @@ const Search = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    // console.log("clicked...", enteredTags);
     props.onSearchClicked(enteredTags);
   };
 

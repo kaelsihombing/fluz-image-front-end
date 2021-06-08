@@ -4,20 +4,20 @@ import Search from "../search/Search";
 import styles from "./Fluz.module.css";
 
 const Fluz = (props) => {
-  const [tag, setTag] = useState("landscape, colorfull");
-  const [perPage, setPerpage] = useState(66);
+  const [tag, setTag] = useState("landscape");
   const [page, setPage] = useState(1);
 
-  const onSearchClickedhandler = (tags) => {
+  const onSearchClickedHandler = (tags) => {
     console.log("clicked...", tags);
 
     setTag(tags);
+    setPage(1);
   };
 
   return (
     <div className={styles.container}>
-      <Search onSearchClicked={onSearchClickedhandler}></Search>
-      <Images tag={tag} page={page} perPage={perPage}></Images>
+      <Search onSearchClicked={onSearchClickedHandler}></Search>
+      <Images tag={tag} page={page}></Images>
     </div>
   );
 };

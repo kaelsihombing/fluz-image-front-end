@@ -22,13 +22,39 @@
 
 .image {
   width: calc(100% / 0.6);
+  object-fit: cover;
   /* vertical-align: middle; */
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .container:hover .image {
   transform: scale(1.1);
+}
+
+.loading {
+  height: 90vh;
+  width: 145rem;
+  /* background-color: red; */
+  display: grid;
+  place-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.loading h1 {
+  color: black;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 @media (min-width: 320px) {
