@@ -102,11 +102,15 @@ const Images = (props) => {
         })}
       </div>
       {loading && (
-        <div className={styles.loading}>
+        <div className={styles.info}>
           <h1>Loading...</h1>
         </div>
       )}
-      <div className={styles.error}>{error && "Error..."}</div>
+      {error && (
+        <div className={styles.info}>
+          <h1>No image...</h1>
+        </div>
+      )}
     </>
   );
 };

@@ -28,17 +28,27 @@ export default function useSearch(tag, page) {
       }),
     })
       .then((res) => {
-        setImages((prevImages) => {
-          return [
-            ...new Set([...prevImages, ...res.data.data.map((image) => image)]),
-          ];
-        });
-        setHasMore(res.data.data.length > 0);
-        if (res) setLoading(false);
+        if (res.data.data.length != 0) {
+          setImages((prevImages) => {
+            return [
+              ...new Set([
+                ...prevImages,
+                ...res.data.data.map((image) => image),
+              ]),
+            ];
+          });
+          setHasMore(res.data.data.length > 0);
+          setLoading(false);
+        } else {
+          setError(true);
+          setLoading(false);
+          return [];
+        }
       })
       .catch((e) => {
         if (axios.isCancel(e)) return;
         setError(true);
+        setLoading(false);
         return;
       });
     return () => cancel();

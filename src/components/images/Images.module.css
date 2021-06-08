@@ -33,9 +33,9 @@
   transform: scale(1.1);
 }
 
-.loading {
+.info {
   height: 90vh;
-  width: 145rem;
+  width: 100%;
   /* background-color: red; */
   display: grid;
   place-items: center;
@@ -43,7 +43,7 @@
   justify-content: center;
 }
 
-.loading h1 {
+.info h1 {
   color: black;
 }
 
