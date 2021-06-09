@@ -28,7 +28,7 @@ export default function useSearch(tag, page) {
       }),
     })
       .then((res) => {
-        if (res.data.data.length != 0) {
+        if (res.data.data.length !== 0) {
           setImages((prevImages) => {
             return [
               ...new Set([

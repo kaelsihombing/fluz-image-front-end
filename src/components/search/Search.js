@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Search.module.css";
-import background from "../../assets/headerImage.png";
+// import background from "../../assets/headerImage.png";
 import logo from "../../assets/logo.png";
 
 const Search = (props) => {
@@ -18,7 +18,7 @@ const Search = (props) => {
   return (
     <div className={styles.search}>
       <div className={styles.cover}>
-        <img src={logo} className={styles.logo}></img>
+        <img alt="logo" src={logo} className={styles.logo}></img>
         <form onSubmit={submitHandler} className={styles.form}>
           <input
             value={enteredTags}
